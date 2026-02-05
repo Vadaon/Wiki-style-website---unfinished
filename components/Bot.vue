@@ -1,7 +1,6 @@
 <template>
   <div class="fluid-container" @click="handleContainerClick">
     <div v-if="showInteractionWindow">
-      <!-- Okno interakcji -->
       <div class="interaction-window">
         <div class="questions">
           <div v-for="(dialogue, index) in dialogues" :key="index">
@@ -9,7 +8,6 @@
           </div>
         </div>
 
-        <!-- Odpowiedzi po prawej stronie -->
         <div class="answers">
           <p v-if="selectedOption && selectedOption.answer"></p>
           <div v-if="selectedOption && selectedOption.followUp">
@@ -18,8 +16,7 @@
             </div>
           </div>
         </div>
-
-        <!-- Historia rozmowy -->
+        
         <div class="conversation-history">
           <h3>Conversation History:</h3>
           <ul>
